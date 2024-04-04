@@ -4,11 +4,12 @@ project(CppCrossPlatformExample)
 
 set(CMAKE_CXX_STANDARD 20)
 
-# Defualt dynamic library, except iOS
+# Default dynamic library, except iOS
 set(BUILD_SHARED_LIBS ON)
+# Since Xbox has CMAKE_SYSTEM_NAME=Windows, we provide a new PLATFORM_NAME variable
 set(PLATFORM_NAME "${CMAKE_SYSTEM_NAME}")
 
-if(WINDOWS)
+if(WINDOWS) # Set by command line argument, since WIN32 is TRUE for Xbox platform
 elseif(LINUX)
 elseif(ANDROID)
     set(CMAKE_SYSTEM_VERSION 21) # API level
@@ -18,10 +19,10 @@ elseif(IOS)
 
     # iOS can only build static library
     set(BUILD_SHARED_LIBS OFF)
-elseif(XBOX)
+elseif(XBOX) # Set by command line argument, since no default variable
     set(PLATFORM_NAME "Xbox")
-elseif(PS)
-    set(PLATFORM_NAME "PS")
+elseif(PROSPERO) # Set by command line argument, since no default variable
+    set(PLATFORM_NAME "Prospero")
 endif()
 
 message(STATUS "CMAKE_SYSTEM_NAME: ${CMAKE_SYSTEM_NAME}")
@@ -31,12 +32,22 @@ message(STATUS "CMAKE_TOOLCHAIN_FILE: ${CMAKE_TOOLCHAIN_FILE}")
 
 # Binary output directory
 # $<0:> Avoid Debug / Release subdirectory
-set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/lib/${PLATFORM_NAME}$<0:>")
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin/${PLATFORM_NAME}$<0:>")
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin/${PLATFORM_NAME}$<0:>")
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/Lib/${PLATFORM_NAME}$<0:>")
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/Bin/${PLATFORM_NAME}$<0:>")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/Bin/${PLATFORM_NAME}$<0:>")
 
 # Debug postfix D
 set(CMAKE_DEBUG_POSTFIX D)
 
+# Static link MSVC runtime on non-Windows platforms
+if(NOT WIN32)
+    set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+endif()
+
 # main library
 add_library(${PROJECT_NAME} library.cpp)
+
+target_link_libraries(${PROJECT_NAME} PRIVATE HashingLibrary)
+
+# ThirdParty libs
+add_subdirectory(ThirdParty/HashingLibrary)

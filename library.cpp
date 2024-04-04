@@ -1,7 +1,10 @@
 #include "library.h"
+#include "sha256.h"
 
 #include <iostream>
 
-void hello() {
-    std::cout << "Hello, World!" << std::endl;
+void hello()
+{
+	SHA256 sha256;
+	std::cout << sha256("Hello, World!") << std::endl;
 }
