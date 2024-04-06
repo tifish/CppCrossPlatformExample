@@ -12,6 +12,7 @@ set(PLATFORM_NAME "${CMAKE_SYSTEM_NAME}")
 
 if(WINDOWS) # Set by command line argument, since WIN32 is TRUE for Xbox platform
 elseif(LINUX)
+elseif(DARWIN) # Set by command line argument, since no default variable
 elseif(ANDROID)
     set(CMAKE_SYSTEM_VERSION 21) # API level
     set(CMAKE_ANDROID_ARCH_ABI arm64-v8a)

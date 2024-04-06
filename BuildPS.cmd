@@ -10,7 +10,7 @@ if not exist "%PS5Toolchain%" (
     exit /b
 )
 
-cmake -B Build\PS -G "Ninja Multi-Config" -DCMAKE_TOOLCHAIN_FILE="%PS5Toolchain%" -DPROSPERO=TRUE &&^
+cmake -B Build\PS -G "Ninja Multi-Config" -DCMAKE_TOOLCHAIN_FILE="%PS5Toolchain%" -DPROSPERO=TRUE %* &&^
 cmake --build Build\PS --config Debug ||^
 pause
 

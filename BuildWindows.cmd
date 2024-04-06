@@ -10,7 +10,7 @@ if not exist "%ProgramFiles%\Microsoft Visual Studio\2022" (
     exit /b
 )
 
-cmake -B Build\Windows -G "Visual Studio 17 2022" -DCMAKE_SYSTEM_NAME=Windows -DWINDOWS=TRUE &&^
+cmake -B Build\Windows -G "Visual Studio 17 2022" -DCMAKE_SYSTEM_NAME=Windows -DWINDOWS=TRUE %* &&^
 cmake --build Build\Windows --config Debug ||^
 pause
 

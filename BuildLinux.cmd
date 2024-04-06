@@ -10,7 +10,7 @@ if errorlevel 1 (
 )
 
 wsl -- ^
-cmake -B "Build/Linux" -G "Ninja Multi-Config" -DCMAKE_SYSTEM_NAME=Linux ^&^& ^
+cmake -B "Build/Linux" -G "Ninja Multi-Config" -DCMAKE_SYSTEM_NAME=Linux %* ^&^& ^
 cmake --build Build/Linux --config Debug ||^
 pause
 

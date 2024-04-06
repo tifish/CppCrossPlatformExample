@@ -9,7 +9,7 @@ if not exist "%GRDKLatest%" (
     exit /b
 )
 
-cmake -B Build\Xbox --fresh -G "Visual Studio 17 2022" -A Gaming.Xbox.Scarlett.x64 --toolchain CMake\gxdk_xs_toolchain.cmake -DXdkEditionTarget=230600 -DXBOX=TRUE &&^
+cmake -B Build\Xbox --fresh -G "Visual Studio 17 2022" -A Gaming.Xbox.Scarlett.x64 --toolchain CMake\gxdk_xs_toolchain.cmake -DXdkEditionTarget=230600 -DXBOX=TRUE %* &&^
 cmake --build Build\Xbox --config Debug ||^
 pause
 
