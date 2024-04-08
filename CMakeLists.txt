@@ -43,11 +43,6 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/Bin/${PLATFORM_NAME}$<0:
 # Debug postfix D
 set(CMAKE_DEBUG_POSTFIX D)
 
-# Static link MSVC runtime on non-Windows platforms
-if(NOT WIN32)
-    set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
-endif()
-
 # --------------------------------------------------------------------------------
 # main library
 add_library(${PROJECT_NAME} library.cpp)
