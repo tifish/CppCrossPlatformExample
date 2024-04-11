@@ -1,0 +1,629 @@
+[
+  {
+    "name": "AdditionalIncludeDirectories",
+    "switch": "I",
+    "comment": "Additional Include Directories",
+    "value": "",
+    "flags": [
+      "UserValue",
+      "SemicolonAppendable"
+    ]
+  },
+  {
+    "name": "NoStandardIncludePaths",
+    "switch": "nostdinc",
+    "comment": "Ignore Standard Include Paths",
+    "value": "true",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "PreprocessorDefinitions",
+    "switch": "D",
+    "comment": "Preprocessor Definitions",
+    "value": "",
+    "flags": [
+      "UserValue",
+      "SemicolonAppendable"
+    ]
+  },
+  {
+    "name": "ForcedIncludeFiles",
+    "switch": "include ",
+    "comment": "Forced Include Files",
+    "value": "",
+    "flags": [
+      "UserValue",
+      "SemicolonAppendable"
+    ]
+  },
+  {
+    "name": "InlinedScopes",
+    "switch": "gno-inlined-scopes",
+    "comment": "Inline Function Debug Information",
+    "value": "false",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "InlinedScopes",
+    "switch": "ginlined-scopes",
+    "comment": "Inline Function Debug Information",
+    "value": "true",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "GenerateDebugInformation",
+    "switch": "g",
+    "comment": "Generate Debug Information",
+    "value": "true",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "Warnings",
+    "switch": "Wall",
+    "comment": "Generate More Warnings",
+    "value": "MoreWarnings",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "Warnings",
+    "switch": "w",
+    "comment": "Turn Off Warnings",
+    "value": "WarningsOff",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "ExtraWarnings",
+    "switch": "Wextra",
+    "comment": "Extra Warnings",
+    "value": "true",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "DisableSpecificWarnings",
+    "switch": "Wno-",
+    "comment": "Disable Specific Warnings",
+    "value": "",
+    "flags": [
+      "UserValue",
+      "SemicolonAppendable"
+    ]
+  },
+  {
+    "name": "ErrorOnSpecificWarnings",
+    "switch": "Werror=",
+    "comment": "Promote Specific Warnings to Errors",
+    "value": "",
+    "flags": [
+      "UserValue",
+      "SemicolonAppendable"
+    ]
+  },
+  {
+    "name": "WarningsAsErrors",
+    "switch": "Werror",
+    "comment": "Treat Warnings as Errors",
+    "value": "true",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "EnableSpecificWarnings",
+    "switch": "W",
+    "comment": "Enable Specific Warnings",
+    "value": "",
+    "flags": [
+      "UserValue",
+      "SemicolonAppendable"
+    ]
+  },
+  {
+    "name": "EnableFixits",
+    "switch": "fdiagnostics-parseable-fixits",
+    "comment": "Enable Fix-It Hints",
+    "value": "true",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "ExtendedDiagnostics",
+    "switch": "fno-caret-diagnostics",
+    "comment": "Extended Diagnostic Messages",
+    "value": "false",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "ExtendedDiagnostics",
+    "switch": "fcaret-diagnostics",
+    "comment": "Extended Diagnostic Messages",
+    "value": "true",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "CompileAs",
+    "switch": "x c++",
+    "comment": "Compile as C++ Code",
+    "value": "CompileAsCpp",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "CompileAs",
+    "switch": "x c-header",
+    "comment": "Compile as C GCH",
+    "value": "CompileAsCHeader",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "CompileAs",
+    "switch": "x assembler-with-cpp",
+    "comment": "Compile as Assembler",
+    "value": "CompileAsAssembler",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "ObjectFileName",
+    "switch": "o ",
+    "comment": "Object File Name",
+    "value": "",
+    "flags": [
+      "UserValue",
+      "SemicolonAppendable"
+    ]
+  },
+  {
+    "name": "EnableJustMyCode",
+    "switch": "fjmc",
+    "comment": "",
+    "value": "true",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "OptimizationLevel",
+    "switch": "O0",
+    "comment": "No Optimization",
+    "value": "Level0",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "OptimizationLevel",
+    "switch": "O1",
+    "comment": "Light Optimization",
+    "value": "Level1",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "OptimizationLevel",
+    "switch": "O2",
+    "comment": "Standard Optimization",
+    "value": "Level2",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "OptimizationLevel",
+    "switch": "O3",
+    "comment": "Full Optimization",
+    "value": "Level3",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "OptimizationLevel",
+    "switch": "Os",
+    "comment": "Optimize and Reduce Size",
+    "value": "Levels",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "OptimizationLevel",
+    "switch": "Oz",
+    "comment": "Aggressively Reduce Size",
+    "value": "Levelz",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "FastMath",
+    "switch": "ffast-math",
+    "comment": "Fast Math",
+    "value": "true",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "NoStrictAliasing",
+    "switch": "fno-strict-aliasing",
+    "comment": "No Strict Aliasing",
+    "value": "true",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "UnrollLoops",
+    "switch": "fno-unroll-loops",
+    "comment": "Unroll Loops",
+    "value": "false",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "UnrollLoops",
+    "switch": "funroll-loops",
+    "comment": "Unroll Loops",
+    "value": "true",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "LinkTimeOptimization",
+    "switch": "flto",
+    "comment": "Enable Support for LTO",
+    "value": "true",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "CppExceptions",
+    "switch": "fexceptions",
+    "comment": "Enable C++ Exceptions",
+    "value": "true",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "RuntimeTypeInfo",
+    "switch": "fno-rtti",
+    "comment": "Enable Run-Time Type Information",
+    "value": "false",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "RuntimeTypeInfo",
+    "switch": "frtti",
+    "comment": "Enable Run-Time Type Information",
+    "value": "true",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "CppLanguageStd",
+    "switch": "std=c++14",
+    "comment": "Use C++14",
+    "value": "Cpp14",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "CppLanguageStd",
+    "switch": "std=c++17",
+    "comment": "Use C++17",
+    "value": "Cpp17",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "CLanguageStd",
+    "switch": "std=c89",
+    "comment": "Use C89",
+    "value": "C89",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "CLanguageStd",
+    "switch": "std=gnu89",
+    "comment": "Use GNU89",
+    "value": "Gnu89",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "CLanguageStd",
+    "switch": "std=c99",
+    "comment": "Use C99",
+    "value": "C99",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "CLanguageStd",
+    "switch": "std=gnu99",
+    "comment": "Use GNU99",
+    "value": "Gnu99",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "CLanguageStd",
+    "switch": "std=c11",
+    "comment": "Use C11",
+    "value": "C11",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "CLanguageStd",
+    "switch": "std=gnu11",
+    "comment": "Use GNU11",
+    "value": "Gnu11",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "AnsiCompliance",
+    "switch": "ansi",
+    "comment": "Check ANSI Compliance",
+    "value": "true",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "CharUnsigned",
+    "switch": "funsigned-char",
+    "comment": "Default Char Unsigned",
+    "value": "true",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "MsExtensions",
+    "switch": "fms-extensions",
+    "comment": "Enable MS Extensions",
+    "value": "true",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "CompileAs",
+    "switch": "x c++-header",
+    "comment": "Compile as C++ GCH",
+    "value": "CompileAsCppHeader",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "PrecompiledHeader",
+    "switch": "x c++-header",
+    "comment": "Create",
+    "value": "Create",
+    "flags": [
+      "UserValue",
+      "UserIgnored",
+      "Continue"
+    ]
+  },
+  {
+    "name": "CompileAs",
+    "switch": "x c",
+    "comment": "Compile as C Code",
+    "value": "CompileAsC",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "PrecompiledHeader",
+    "switch": "include-pch",
+    "comment": "Use",
+    "value": "Use",
+    "flags": [
+      "UserValue",
+      "UserIgnored",
+      "Continue"
+    ]
+  },
+  {
+    "name": "PrecompiledHeaderOutputFile",
+    "switch": "PrecompiledHeaderOutputFile",
+    "comment": "Create",
+    "value": "",
+    "flags": [
+      "UserValue",
+      "UserRequired"
+    ]
+  },
+  {
+    "name": "PrecompiledHeaderOutputFile",
+    "switch": "PrecompiledHeaderOutputFile",
+    "comment": "Use",
+    "value": "",
+    "flags": [
+      "UserValue",
+      "UserRequired"
+    ]
+  },
+  {
+    "name": "UndefinedBehavior",
+    "switch": "fsanitize=undefined -fsanitize-recover=undefined",
+    "comment": "Recover",
+    "value": "Recover",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "UndefinedBehavior",
+    "switch": "fsanitize=undefined -fno-sanitize-recover=undefined",
+    "comment": "Fatal",
+    "value": "Fatal",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "AddressSanitizer",
+    "switch": "fsanitize=address -fsanitize-recover=address",
+    "comment": "Recover",
+    "value": "Recover",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "AddressSanitizer",
+    "switch": "fsanitize=address -fno-sanitize-recover=address",
+    "comment": "Fatal",
+    "value": "Fatal",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "ThreadSanitizer",
+    "switch": "fsanitize=thread",
+    "comment": "On",
+    "value": "On",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "EnableCodeCoverage",
+    "switch": "fcoverage-mapping -fprofile-instr-generate",
+    "comment": "Enable Code Coverage",
+    "value": "true",
+    "flags": [
+      "UserValue",
+      "UserIgnored",
+      "Continue"
+    ]
+  },
+  {
+    "name": "CodeCoverageOutputFile",
+    "switch": "CodeCoverageOutputFile",
+    "comment": "Enable Code Coverage",
+    "value": "",
+    "flags": [
+      "UserValue",
+      "UserRequired"
+    ]
+  },
+  {
+    "name": "NoDefaultCheckers",
+    "switch": "-analyzer-no-default-checks",
+    "comment": "NoDefaultCheckers",
+    "value": "true",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "AnalyzerCheckers",
+    "switch": "Xclang -analyzer-checker=",
+    "comment": "Analyzer Checkers",
+    "value": "",
+    "flags": [
+      "UserValue",
+      "SemicolonAppendable"
+    ]
+  },
+  {
+    "name": "DisableCheckers",
+    "switch": "Xclang -analyzer-disable-checker=",
+    "comment": "Disable Checkers",
+    "value": "",
+    "flags": [
+      "UserValue",
+      "SemicolonAppendable"
+    ]
+  },
+  {
+    "name": "MultiProcessorCompilation",
+    "switch": "MP",
+    "comment": "MultiProcessorCompilation",
+    "value": "true",
+    "flags": [
+      "UserValue",
+      "UserIgnored",
+      "Continue"
+    ]
+  },
+  {
+    "name": "ProcessorNumber",
+    "switch": "MP",
+    "comment": "ProcessorNumber",
+    "value": "",
+    "flags": [
+      "UserValue",
+      "UserRequired"
+    ]
+  },
+  {
+    "name": "MultiProcessorCompilation",
+    "switch": "vsi-mp",
+    "comment": "MultiProcessorCompilation",
+    "value": "true",
+    "flags": [
+      "UserValue",
+      "UserIgnored",
+      "Continue"
+    ]
+  },
+  {
+    "name": "ProcessorNumber",
+    "switch": "vsi-mp",
+    "comment": "ProcessorNumber",
+    "value": "",
+    "flags": [
+      "UserValue",
+      "UserRequired"
+    ]
+  }
+]

@@ -1,7 +1,7 @@
 @echo off
 setlocal
 cd /d "%~dp0"
-set path=C:\Library\Software\Develope\Build\cmake\bin;C:\Library\Software\Develope\Build\ninja;%path%
+set path=%~dp0Tools\cmake\bin;%~dp0Tools\ninja;%path%
 
 set PS5Toolchain=%SCE_ROOT_DIR%Prospero\Tools\CMake\PS5.cmake
 if not exist "%PS5Toolchain%" (
@@ -11,7 +11,8 @@ if not exist "%PS5Toolchain%" (
 )
 
 cmake -B Build\PS -G "Ninja Multi-Config" -DCMAKE_TOOLCHAIN_FILE="%PS5Toolchain%" -DPROSPERO=TRUE %* &&^
-cmake --build Build\PS --config Debug ||^
+cmake --build Build\PS --config Debug &&^
+cmake --build Build\PS --config Release ||^
 pause
 
 endlocal

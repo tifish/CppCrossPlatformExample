@@ -1,0 +1,173 @@
+[
+  {
+    "name": "OutputFile",
+    "switch": "o",
+    "comment": "Output File",
+    "value": "",
+    "flags": [
+      "UserValue",
+      "SemicolonAppendable"
+    ]
+  },
+  {
+    "name": "OutputFormat",
+    "switch": "-oformat=prx",
+    "comment": "PRX File",
+    "value": "PRXFile",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "PrxStubOutputDir",
+    "switch": "-prx-stub-output-dir",
+    "comment": "PrxStubOutputDir",
+    "value": "",
+    "flags": [
+      "UserValue",
+      "SemicolonAppendable"
+    ]
+  },
+  {
+    "name": "AdditionalLibraryDirectories",
+    "switch": "L",
+    "comment": "Additional Library Directories",
+    "value": "",
+    "flags": [
+      "UserValue",
+      "SemicolonAppendable"
+    ]
+  },
+  {
+    "name": "EditAndContinue",
+    "switch": "-enc",
+    "comment": "Enable Edit and Continue",
+    "value": "true",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "InfoStripping",
+    "switch": "S",
+    "comment": "Strip Debug Information Only",
+    "value": "StripDebug",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "InfoStripping",
+    "switch": "s",
+    "comment": "Strip Symbols and Debug Information",
+    "value": "StripSymsAndDebug",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "DataStripping",
+    "switch": "-gc-sections",
+    "comment": "Unused Function and Data Stripping",
+    "value": "true",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "DuplicateStripping",
+    "switch": "-icf=all --ignore-data-address-equality",
+    "comment": "Duplicate Function and Data Stripping",
+    "value": "true",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "LinkTimeOptimization",
+    "switch": "-lto=thin",
+    "comment": "Thin",
+    "value": "Thin",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "ThinLtoCaching",
+    "switch": "-thinlto-cache-dir",
+    "comment": "Enable Thin LTO Caching",
+    "value": "true",
+    "flags": [
+      "UserValue",
+      "UserIgnored",
+      "Continue"
+    ]
+  },
+  {
+    "name": "ThinLtoCacheDir",
+    "switch": "ThinLtoCacheDir",
+    "comment": "Enable Thin LTO Caching",
+    "value": "",
+    "flags": [
+      "UserValue",
+      "UserRequired"
+    ]
+  },
+  {
+    "name": "GenerateMapFile",
+    "switch": "-Map",
+    "comment": "Generate Map File",
+    "value": "true",
+    "flags": [
+      "UserValue",
+      "UserIgnored",
+      "Continue"
+    ]
+  },
+  {
+    "name": "MapFileName",
+    "switch": "MapFileName",
+    "comment": "Generate Map File",
+    "value": "",
+    "flags": [
+      "UserValue",
+      "UserRequired"
+    ]
+  },
+  {
+    "name": "Addressing",
+    "switch": "-addressing=non-aslr",
+    "comment": "Without ASLR",
+    "value": "NonAslr",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "EnableJustMyCode",
+    "switch": "mllvm -enable-jmc-instrument --whole-archive -lSceJmc_nosubmission --no-whole-archive",
+    "comment": "",
+    "value": "true",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "StartGroup",
+    "switch": "-start-group",
+    "comment": "StartGroup",
+    "value": "true",
+    "flags": [
+      "0"
+    ]
+  },
+  {
+    "name": "EndGroup",
+    "switch": "-end-group",
+    "comment": "EndGroup",
+    "value": "true",
+    "flags": [
+      "0"
+    ]
+  }
+]
