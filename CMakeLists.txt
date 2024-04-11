@@ -5,8 +5,13 @@ project(CppCrossPlatformExample)
 
 # Default C++ 20, except Prospero
 set(CMAKE_CXX_STANDARD 20)
+
 # Default dynamic library, except iOS
 set(BUILD_SHARED_LIBS ON)
+
+# Position independent code for static library linking into shared libraries, excpet iOS
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+
 # Since Xbox has CMAKE_SYSTEM_NAME=Windows, we provide a new PLATFORM_NAME variable
 set(PLATFORM_NAME "${CMAKE_SYSTEM_NAME}")
 
@@ -21,6 +26,7 @@ elseif(IOS)
 
     # iOS can only build static library
     set(BUILD_SHARED_LIBS OFF)
+    set(CMAKE_POSITION_INDEPENDENT_CODE OFF)
 elseif(XBOX) # Set by command line argument, since no default variable
     set(PLATFORM_NAME "Xbox")
 elseif(PROSPERO) # Set by command line argument, since no default variable
@@ -53,5 +59,5 @@ target_link_libraries(${PROJECT_NAME} PRIVATE HashingLibrary)
 # ThirdParty libs
 # By default ThirdParty libs are not built when existing.
 # Can be build by passing -DBUILD_THIRDPARTY=ON, or uncommenting the line below:
-#set(BUILD_THIRDPARTY ON)
+# set(BUILD_THIRDPARTY ON)
 add_subdirectory(ThirdParty/HashingLibrary)
