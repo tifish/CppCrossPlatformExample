@@ -12,15 +12,14 @@ set(BUILD_SHARED_LIBS ON)
 # Position independent code for static library linking into shared libraries, excpet iOS
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
-# Since Xbox has CMAKE_SYSTEM_NAME=Windows, we provide a new PLATFORM_NAME variable
-set(PLATFORM_NAME "${CMAKE_SYSTEM_NAME}")
+# Since Xbox has CMAKE_SYSTEM_NAME=Windows, we provide a new SYSTEM_NAME variable
+set(SYSTEM_NAME "${CMAKE_SYSTEM_NAME}")
 
 if(WINDOWS) # Set by command line argument, since WIN32 is TRUE for Xbox platform
 elseif(LINUX)
 elseif(DARWIN) # Set by command line argument, since no default variable
 elseif(ANDROID)
     set(CMAKE_SYSTEM_VERSION 21) # API level
-    set(CMAKE_ANDROID_ARCH_ABI arm64-v8a)
 elseif(IOS)
     set(CMAKE_OSX_ARCHITECTURES arm64)
 
@@ -28,7 +27,7 @@ elseif(IOS)
     set(BUILD_SHARED_LIBS OFF)
     set(CMAKE_POSITION_INDEPENDENT_CODE OFF)
 elseif(XBOX) # Set by command line argument, since no default variable
-    set(PLATFORM_NAME "Xbox")
+    set(SYSTEM_NAME "Xbox")
 elseif(PROSPERO) # Set by command line argument, since no default variable
     # Prospero supports only C++ 17
     set(CMAKE_CXX_STANDARD 17)
@@ -36,15 +35,16 @@ endif()
 
 message(STATUS "CMAKE_SYSTEM_NAME: ${CMAKE_SYSTEM_NAME}")
 message(STATUS "CMAKE_GENERATOR_PLATFORM: ${CMAKE_GENERATOR_PLATFORM}")
-message(STATUS "PLATFORM_NAME: ${PLATFORM_NAME}")
+message(STATUS "SYSTEM_NAME: ${SYSTEM_NAME}")
+message(STATUS "CMAKE_SYSTEM_PROCESSOR: ${CMAKE_SYSTEM_PROCESSOR}")
 message(STATUS "CMAKE_TOOLCHAIN_FILE: ${CMAKE_TOOLCHAIN_FILE}")
 
 # --------------------------------------------------------------------------------
 # Binary output directory
 # $<0:> Avoid Debug / Release subdirectory
-set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/Lib/${PLATFORM_NAME}$<0:>")
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/Bin/${PLATFORM_NAME}$<0:>")
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/Bin/${PLATFORM_NAME}$<0:>")
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/Lib/${SYSTEM_NAME}$<0:>")
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/Bin/${SYSTEM_NAME}$<0:>")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/Bin/${SYSTEM_NAME}$<0:>")
 
 # Debug postfix D
 set(CMAKE_DEBUG_POSTFIX D)
