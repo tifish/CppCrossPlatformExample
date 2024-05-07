@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.25)
+cmake_minimum_required(VERSION 3.16)
 
 # --------------------------------------------------------------------------------
 project(CppCrossPlatformExample)
@@ -33,6 +33,7 @@ elseif(XBOX) # Set by command line argument, since no default variable
 elseif(PROSPERO) # Set by command line argument, since no default variable
     # Prospero supports only C++ 17
     set(CMAKE_CXX_STANDARD 17)
+elseif(OHOS)
 endif()
 
 message(STATUS "CMAKE_SYSTEM_NAME: ${CMAKE_SYSTEM_NAME}")
@@ -41,6 +42,7 @@ message(STATUS "SYSTEM_NAME: ${SYSTEM_NAME}")
 message(STATUS "CMAKE_HOST_SYSTEM_PROCESSOR: ${CMAKE_HOST_SYSTEM_PROCESSOR}")
 message(STATUS "CMAKE_SYSTEM_PROCESSOR: ${CMAKE_SYSTEM_PROCESSOR}")
 message(STATUS "CMAKE_TOOLCHAIN_FILE: ${CMAKE_TOOLCHAIN_FILE}")
+message(STATUS "CMAKE_BUILD_TYPE: ${CMAKE_BUILD_TYPE}")
 
 # --------------------------------------------------------------------------------
 # Binary output directory

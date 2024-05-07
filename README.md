@@ -8,6 +8,7 @@
         - Android: requires Visual Studio 2022 with Mobile development with C++ workload
         - Xbox: requires Visual Studio 2022, Microsoft GDK
         - PlayStation: requires PS5 SDK
+        - OpenHarmony: requires OpenHarmony SDK, JDK
     - On MacOS, build for
         - MacOS: requires Xcode, cmake
         - iOS: requires Xcode, cmake
